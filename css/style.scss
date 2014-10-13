@@ -34,14 +34,19 @@ $font3: 'Ubuntu', sans-serif;
         }
 }
 
+@mixin toggleInEditMode($visibleByDefault: true){
+    display: if($visibleByDefault, none, inline-block);
+    ul li.editMode &{
+         display: if($visibleByDefault, inline-block, none);
+    }
+}
 
 
 
 
-
-
-
-
+/*************************************************************
+ *  Style                                                    *
+ *************************************************************/
 
 
 body{
@@ -86,9 +91,12 @@ input[type=text]{
 
 label {
     padding-left: 20px;
+    @include toggleInEditMode(false);
+    /*display: none;
     ul li.editMode &{
-         display:none;
-    }
+         display: inline-block;
+    }*/
+
 }
 
 button{
@@ -102,6 +110,15 @@ button{
 
     .completed &{
          @include buttons($completedBG);
+    }
+
+    &.save{
+          @include toggleInEditMode(false);
+    }
+
+
+    &.edit{
+         @include toggleInEditMode(true);
     }
 
 }
