@@ -1,0 +1,166 @@
+/*************************************************************
+ *  Color Variables                                          *
+ ************************************************************/
+/*************************************************************
+ *  Fonts                                               *
+ *************************************************************/
+/*************************************************************
+ *  Mixins                                                   *
+ *************************************************************/
+/* line 47, css/style.scss */
+body {
+  background: #34495e;
+  font-family: "Coming Soon", cursive;
+  font-size: 16px;
+  color: #f3f6f6;
+}
+
+/* line 54, css/style.scss */
+div {
+  margin: 15px;
+  padding: 15px;
+  border-radius: 15px;
+  color: #090d10;
+}
+
+/* line 61, css/style.scss */
+h1, h2, h3, h4, h5, h6, h7, h8, h9 {
+  font-family: "Rock Salt", cursive;
+  font-weight: Bold;
+  padding: 0;
+  line-height: 1em;
+}
+
+/* line 69, css/style.scss */
+h1 {
+  font-size: 2em;
+  color: #f3f6f6;
+}
+
+/* line 74, css/style.scss */
+input[type=text] {
+  border: none;
+  background: #f3f6f6;
+  color: #090d10;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 5px;
+  display: none;
+}
+/* line 82, css/style.scss */
+ul li.editMode input[type=text] {
+  display: inline-block;
+}
+
+/* line 87, css/style.scss */
+label {
+  padding-left: 20px;
+}
+/* line 89, css/style.scss */
+ul li.editMode label {
+  display: none;
+}
+
+/* line 94, css/style.scss */
+button {
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 5px;
+  border-radius: 10px;
+}
+/* line 99, css/style.scss */
+.todo button {
+  border: 1px solid #f8c9c4;
+  background: transparent;
+  color: #f8c9c4;
+}
+/* line 30, css/style.scss */
+.todo button:hover {
+  border: 1px solid white;
+  color: white;
+  background: #ed7669;
+}
+/* line 103, css/style.scss */
+.completed button {
+  border: 1px solid #a8ebc4;
+  background: transparent;
+  color: #a8ebc4;
+}
+/* line 30, css/style.scss */
+.completed button:hover {
+  border: 1px solid #fbfefc;
+  color: #fbfefc;
+  background: #54d98c;
+}
+
+/* line 109, css/style.scss */
+li {
+  margin-bottom: 15px;
+}
+
+/* line 113, css/style.scss */
+.title {
+  display: inline-block;
+  padding-right: 20px;
+  line-height: 1em;
+}
+
+/* line 119, css/style.scss */
+.todo {
+  background: #e74c3c;
+}
+
+/* line 123, css/style.scss */
+.completed {
+  background: #2ecc71;
+}
+/* line 125, css/style.scss */
+.completed li {
+  text-decoration: line-through;
+}
+
+/* line 131, css/style.scss */
+.timer {
+  background: white;
+  color: #090d10;
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+}
+
+/* line 147, css/style.scss */
+.timeRemaining {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 156, css/style.scss */
+.addTask {
+  position: relative;
+  background: white;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 3em;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+}
+
+/* line 167, css/style.scss */
+.plus {
+  padding: 0;
+  margin: 0;
+  color: #648686;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, -55%);
+}
