@@ -10,7 +10,7 @@
 /*************************************************************
  *  Style                                                    *
  *************************************************************/
-/* line 52, css/style.scss */
+/* line 53, css/style.scss */
 body {
   background: #34495e;
   font-family: "Coming Soon", cursive;
@@ -18,7 +18,7 @@ body {
   color: #f3f6f6;
 }
 
-/* line 59, css/style.scss */
+/* line 60, css/style.scss */
 div {
   margin: 15px;
   padding: 15px;
@@ -26,7 +26,7 @@ div {
   color: #090d10;
 }
 
-/* line 66, css/style.scss */
+/* line 67, css/style.scss */
 h1, h2, h3, h4, h5, h6, h7, h8, h9 {
   font-family: "Rock Salt", cursive;
   font-weight: Bold;
@@ -34,13 +34,13 @@ h1, h2, h3, h4, h5, h6, h7, h8, h9 {
   line-height: 1em;
 }
 
-/* line 74, css/style.scss */
+/* line 75, css/style.scss */
 h1 {
   font-size: 2em;
   color: #f3f6f6;
 }
 
-/* line 79, css/style.scss */
+/* line 80, css/style.scss */
 input[type=text] {
   border: none;
   background: #f3f6f6;
@@ -50,12 +50,12 @@ input[type=text] {
   padding: 5px;
   display: none;
 }
-/* line 87, css/style.scss */
+/* line 40, css/style.scss */
 ul li.editMode input[type=text] {
   display: inline-block;
 }
 
-/* line 92, css/style.scss */
+/* line 90, css/style.scss */
 label {
   padding-left: 20px;
   display: inline-block;
@@ -64,19 +64,19 @@ label {
        display: inline-block;
   }*/
 }
-/* line 39, css/style.scss */
+/* line 40, css/style.scss */
 ul li.editMode label {
   display: none;
 }
 
-/* line 102, css/style.scss */
+/* line 100, css/style.scss */
 button {
   margin-left: 15px;
   margin-right: 15px;
   padding: 5px;
   border-radius: 10px;
 }
-/* line 107, css/style.scss */
+/* line 105, css/style.scss */
 .todo button {
   border: 1px solid #f8c9c4;
   background: transparent;
@@ -88,7 +88,7 @@ button {
   color: white;
   background: #ed7669;
 }
-/* line 111, css/style.scss */
+/* line 109, css/style.scss */
 .completed button {
   border: 1px solid #a8ebc4;
   background: transparent;
@@ -100,50 +100,54 @@ button {
   color: #fbfefc;
   background: #54d98c;
 }
-/* line 115, css/style.scss */
+/* line 113, css/style.scss */
 button.save {
-  display: inline-block;
+  display: none;
 }
-/* line 39, css/style.scss */
+/* line 40, css/style.scss */
 ul li.editMode button.save {
-  display: none;
-}
-/* line 120, css/style.scss */
-button.edit {
-  display: none;
-}
-/* line 39, css/style.scss */
-ul li.editMode button.edit {
   display: inline-block;
+}
+/* line 118, css/style.scss */
+button.edit {
+  display: inline-block;
+}
+/* line 40, css/style.scss */
+ul li.editMode button.edit {
+  display: none;
 }
 
-/* line 126, css/style.scss */
+/* line 124, css/style.scss */
 li {
   margin-bottom: 15px;
 }
 
-/* line 130, css/style.scss */
+/* line 128, css/style.scss */
 .title {
   display: inline-block;
   padding-right: 20px;
   line-height: 1em;
 }
 
-/* line 136, css/style.scss */
+/* line 134, css/style.scss */
 .todo {
   background: #e74c3c;
 }
 
-/* line 140, css/style.scss */
+/* line 138, css/style.scss */
 .completed {
   background: #2ecc71;
 }
-/* line 142, css/style.scss */
+/* line 140, css/style.scss */
 .completed li {
   text-decoration: line-through;
 }
+/* line 142, css/style.scss */
+.completed li label {
+  text-decoration: line-through;
+}
 
-/* line 148, css/style.scss */
+/* line 149, css/style.scss */
 .timer {
   background: white;
   color: #090d10;
@@ -157,7 +161,7 @@ li {
   z-index: 100;
 }
 
-/* line 164, css/style.scss */
+/* line 165, css/style.scss */
 .timeRemaining {
   padding: 0;
   margin: 0;
@@ -167,7 +171,7 @@ li {
   transform: translate(-50%, -50%);
 }
 
-/* line 173, css/style.scss */
+/* line 174, css/style.scss */
 .addTask {
   position: relative;
   background: white;
@@ -178,7 +182,7 @@ li {
   height: 50px;
 }
 
-/* line 184, css/style.scss */
+/* line 185, css/style.scss */
 .plus {
   padding: 0;
   margin: 0;

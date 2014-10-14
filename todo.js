@@ -4,6 +4,7 @@ console.log("Initialized Okay");
 var todoList = document.getElementById('todoList');
 var completedList = document.getElementById('completedList');
 var newTaskListItem = document.getElementById('newTask');
+var addTaskButton = document.getElementById('addTaskButton');
 
 //As a user, I should be able to
 
@@ -62,19 +63,39 @@ var saveTask = function(){
         //and it will toggle .editMode on the <li>
 };
 
-var pageLoad = function(){
-    console.log("pageLoad function started");
-    //When the page loads
-    //Bind the functions to the buttons
-        //Each existing li should be cycled through in todoList
-            //and it will bind the edit function to it <button class="edit">Edit</button>
-            //and it will bind the save function to <button class="save">Save</button>
-            //and  bind the mark complete function to  <button class="markComplete">Complete</button>
-            //and it will bind the delete function to it <button class="delete">Delete</button>
-        //Each existing li should be cycled through in completedList
-            //and it will bind the edit function to it<button class="edit">Edit</button>
-            //and it will bind the save function to <button class="save">Save</button>
-            //and  bind the mark incomplete function to  <button class="markIncomplete">inComplete</button>
-            //and it will bind the delete function to it <button class="delete">Delete</button>
-        //The add task button should have the add task function bound to it
+//dummy function to test button clicks
+var dummyAlert = function() {
+        alert("You clicked on the <"+this.tagName+"> #"+this.id);
 };
+
+ //Bind the functions to the buttons
+var bindFunctionsToButtons = function(currentList){
+     var currentButton = null;
+     for(var i = 0; i < currentList.children.length; i++){
+                //and it will bind the edit function to it <button class="edit">Edit</button>
+                currentButton = currentList.children[i].getElementsByClassName('edit');
+                if (currentButton.length>0) currentButton[0].addEventListener("click", editTask, false);
+                //and it will bind the save function to <button class="save">Save</button>
+                currentButton = currentList.children[i].getElementsByClassName('save');
+                if (currentButton.length>0) currentButton[0].addEventListener("click", saveTask, false);
+                //and  bind the mark complete function to  <button class="markComplete">Complete</button>
+                currentButton = currentList.children[i].getElementsByClassName('markComplete');
+                if (currentButton.length>0) currentButton[0].addEventListener("click", markComplete, false);
+                //and  bind the mark incomplete function to  <button class="markInomplete">Incomplete</button>
+                currentButton = currentList.children[i].getElementsByClassName('markIncomplete');
+                if (currentButton.length>0) currentButton[0].addEventListener("click", markIncomplete, false);
+                //and it will bind the delete function to it <button class="delete">Delete</button>
+                currentButton = currentList.children[i].getElementsByClassName('delete');
+                if (currentButton.length>0) currentButton[0].addEventListener("click", deleteTask, false);
+            }
+};
+
+//Each existing li should be cycled through in todoList and functions bound to the buttons
+bindFunctionsToButtons(todoList);
+//Each existing li should be cycled through in completedList and functions bound to the buttons
+bindFunctionsToButtons(completedList);
+
+//The add task button should have the add task function bound to it
+addTaskButton.addEventListener("click", addNewTask, false);
+
+
