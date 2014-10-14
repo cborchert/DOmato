@@ -45,6 +45,7 @@ $font3: 'Ubuntu', sans-serif;
 
 
 
+
 /*************************************************************
  *  Style                                                    *
  *************************************************************/
@@ -121,10 +122,18 @@ button{
 
 }
 
+ul{
+    list-style: none;
+}
+
 li {
     margin-bottom: 15px;
 }
 
+div li:before{
+    content: "- ";
+    font-family: "Times New Roman",sans-serif;
+}
 .title{
     display: inline-block;
     padding-right: 20px;
@@ -133,10 +142,17 @@ li {
 
 .todo{
     background: $todoBG;
+    ul li button.markIncomplete{
+        display: none;
+    }
+
 }
 
 .completed{
     background: $completedBG;
+    ul li button.markComplete{
+        display: none;
+    }
     li{
         text-decoration: line-through;
         label{
